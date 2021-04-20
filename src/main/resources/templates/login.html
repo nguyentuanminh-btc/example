@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="">
 <head>
 <meta charset="UTF-8" />
 <title>Login Page</title>
@@ -9,10 +9,14 @@
 	<div class="main-content">
 		<p th:if="${param.error}" class="error">Invalid email or password</p>
 		<p th:if="${param.logout}" class="success">You have been logged out</p>
-		<h3>Login to continue</h3>
+		<h3>Please login your username and password</h3>
 		<form th:action="@{/login-user}" method="POST">
-			<input type="text" name="username" placeholder="Your username" /><br />
-			<input type="password" name="password" placeholder="Your password" /><br />
+			<label>
+				<input type="text" name="username" placeholder="Your username" />
+			</label><br />
+			<label>
+				<input type="password" name="password" placeholder="Your password" />
+			</label><br />
 			<button type="submit">Login</button> <br />
 		</form>
 	</div>
