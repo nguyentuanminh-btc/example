@@ -9,7 +9,7 @@
 	<div class="main-content">
 		<p th:if="${param.error}" class="error">Invalid email or password</p>
 		<p th:if="${param.logout}" class="success">You have been logged out</p>
-		<h3>Please login your username and password</h3>
+		<h3>Please login your username and password!</h3>
 		<form th:action="@{/login-user}" method="POST">
 			<label>
 				<input type="text" name="username" placeholder="Your username" />
